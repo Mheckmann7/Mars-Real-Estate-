@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
 const plotSchema = new mongoose.Schema({
-    name: String,
+    img: String,
+    location: String, 
     price: Number
 }); 
 

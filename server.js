@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const methodOverride = require('method-override');
 const session = require('express-session');
 const passport = require('passport');
 const port = 3000;
@@ -19,8 +20,11 @@ const usersRouter = require('./routes/users');
 
 app.set('view engine', 'ejs');
 
+
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended: true}));
+app.use(methodOverride('_method'));
+app.use(express.urlencoded({extended: false}));
+app.use(express.static('public'));
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
@@ -28,11 +32,11 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.static('public'));
+
 
 
 app.use('/', indexRouter);
-app.use('/', plotsRouter);
+app.use('/plots', plotsRouter);
 app.use('/', usersRouter);
 
 app.listen(port, function() {

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Plots</title>
+</head>
+<body>
+    <nav>
+    <h1>Plots</h1>
+    <a href="/">Home</a>
+    <a href="/users">Checkout</a>
+    </nav>
+    <main>
+        <h3>Plots For Sale</h3>
+        <img src="/images/Mars_landscape.jpg" alt="Mars landscape">
+
+
+        <!-- <a href="/plots/new">CUSTOM</a> -->
+
+           
+        <ul>
+            <% plots.forEach(plot => { %>
+                <li>
+                    <a href="/plots/<%= plot._id %>">DETAILS</a>
+                </li>
+                <% }); %>
+            </ul>
+
+  
+
+
+    </main>
+</body>
+</html>

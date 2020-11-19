@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Checkout</title>
 </head>
 <body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/plots">Plots</a>
     <% if (user) { %>
         <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
       <% } else { %>
         <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login With Google</a>
       <% } %> 
+    </nav>
+    
+    <main>
+      <h3>Your Cart</h3>
+    </main>
+    <div>
+      <h2>Checkout</h2>
+    </div>
 </body>
 </html>
