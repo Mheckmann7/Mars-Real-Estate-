@@ -20,6 +20,7 @@
         <h3>Plots For Sale</h3>
         <img src="/images/Mars_landscape.jpg" alt="Mars landscape">
         <a href="/plots/new">Sell</a>
+      
         <ul>
             <% plots.forEach(plot => { %>
                 <form action="/plots/<%= plot._id %>?_method=DELETE" method="POST">
@@ -27,8 +28,10 @@
                 </form> 
                 <li>      
                     <a href="/plots/<%= plot._id %>">DETAILS</a>
+                    <h2>Size: <%=plot.size %> </h2>
+                    <h2>Price: $<%=plot.price %> </h2>
                 </li>
-    
+                <a href="/plots/<%= plot._id %>/edit">Edit</a>
                 <% }); %>
             </ul>
     </main>

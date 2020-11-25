@@ -1,3 +1,4 @@
+
 const Plot = require('../models/plot');
 
 
@@ -46,20 +47,21 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-    Plot.findOne({'plot._id': req.params.id}, function(err, plot) {
-        const plotUp = plot.id(req.params.id);
-        plotUp.text = req.body.text;
-        plotUp.save(function(err) {
+    Plot.findById(req.params.id, function(err, plot) {
+        Plot.findByIdAndUpdate(req.params.id, 
+            req.body,
+            {new:true}, 
+            function(err) {
+            console.log('Updated');
             if(err) return res.redirect('/plots');
-            res.redirect(`/plots/${plot._id}`)
-        })
+            res.redirect(`/plots`);
+        });
     });
-    
 }
 
 function deletePlot(req,res) {
-    Plot.findOne({'plot._id': req.params.id}, function(err, plot) {
-        Plot.findOneAndDelete(req.params.id, function(err) {
+    Plot.findById(req.params.id, function(err, plot) {
+        Plot.findByIdAndDelete(req.params.id, function(err) {
             if(err) return res.redirect('/plots');
             res.redirect(`/plots`)
         })

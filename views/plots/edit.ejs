@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Edit: "<%=plot._id %>"</h1>
-    <form action="/plots/<%= plot._id %>?_method=PUT" method="post">
+    <form action="/plots/<%= plot._id %>?_method=PUT" method="POST">
         <label>Image Link: </label>
         <input type="img" value="<%=plot.img %>">
         <label>Size:</label>
