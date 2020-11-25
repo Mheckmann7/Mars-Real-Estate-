@@ -7,10 +7,24 @@
     <title>Custom</title>
 </head>
 <body>
+    <nav>
+        <img src="/images/26281.png" alt="Mars">
+        <h1>Mars Real Estate</h1>
+        <a href="/">Home</a>
+        <a href="/plots">For Sale</a>
+        <a href="/plots/new">Sell</a>
+        <a href="/users">Buy</a>
+      
+        </nav>
     <main>
+        <a href="/plots/<% plot._id %>/edit">Edit</a>
         <h1>Details</h1>
-        <h2> <%=plot.location %> </h2>
-
+        <h2>img: <%=plot.img %> </h2>
+        <h2>Size: <%=plot.size %> </h2>
+        <h2>Price: $<%=plot.price %> </h2>
+        <h2>Type: <%=plot.type %> </h2>
+     
     </main>
+
 </body>
 </html>

@@ -5,6 +5,8 @@ const indexCtrl = require('../controllers/index');
 
 router.get('/', indexCtrl.index); 
 
+
+
 router.get('/auth/google', passport.authenticate(
     'google',
     {scope: ['profile', 'email']}

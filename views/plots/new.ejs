@@ -7,12 +7,37 @@
     <title>Document</title>
 </head>
 <body>
-     <nav>
-        <h1>Custom Plot</h1>
-    </nav>
+    <nav>
+        <img src="/images/26281.png" alt="Mars">
+        <h1>Mars Real Estate</h1>
+        <a href="/">Home</a>
+        <a href="/plots">For Sale</a>
+        <a href="/plots/new">Sell</a>
+        <a href="/users">Buy</a>
+        
+        </nav>
+    <main>
+        
+        <h3>Create your own listing</h3>
         <form action="/plots" method="POST">
-            <input type="text" name="location" id="">
+            <label>Image Link: </label>
+            <input type="img" value="ex. http://img.com">
+            <label>Size:</label>
+            <select name="size" id="">
+                <option value="Small">Small</option>
+                <option value="Mediun">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+            <label for="">Type:</label>
+            <select name="type" id="">
+                <option value="Plot">Plot</option>
+                <option value="House">House</option>
+            </select>
+            <label>Price:</label>
+            <input type="number" name="price" id="" value="price">
             <button type="submit">Submit</button>
         </form>
+     
+    </main>
 </body>
 </html>

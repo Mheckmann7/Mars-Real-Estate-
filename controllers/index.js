@@ -1,7 +1,10 @@
 module.exports = {
-    index, 
+    index,
+
 };
 
-function index(req,res) {
+function index(req, res) {
     res.render('index');
 }
+
+

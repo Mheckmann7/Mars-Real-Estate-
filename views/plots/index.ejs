@@ -8,29 +8,32 @@
 </head>
 <body>
     <nav>
-    <h1>Plots</h1>
-    <a href="/">Home</a>
-    <a href="/users">Checkout</a>
-    </nav>
+        <img src="/images/26281.png" alt="Mars">
+        <h1>Mars Real Estate</h1>
+        <a href="/">Home</a>
+        <a href="/plots">For Sale</a>
+        <a href="/plots/new">Sell</a>
+        <a href="/users">Buy</a>
+     
+        </nav>
     <main>
         <h3>Plots For Sale</h3>
         <img src="/images/Mars_landscape.jpg" alt="Mars landscape">
-
-
-        <!-- <a href="/plots/new">CUSTOM</a> -->
-
-           
+        <a href="/plots/new">Sell</a>
         <ul>
             <% plots.forEach(plot => { %>
-                <li>
+                <form action="/plots/<%= plot._id %>?_method=DELETE" method="POST">
+                    <button type="submit">X</button>
+                </form> 
+                <li>      
                     <a href="/plots/<%= plot._id %>">DETAILS</a>
                 </li>
+    
                 <% }); %>
             </ul>
-
-  
-
-
     </main>
+    <div>
+        <h2>Plots</h2>
+      </div>
 </body>
 </html>

@@ -1,16 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <title>Home Page</title>
 </head>
-<body>
+
+<body onload="draw();">
     <nav>
-    <h1>Mars Real Estate</h1>
-    <a href="/plots">Plots</a>
-    <a href="/users">Checkout</a>
+        <img src="/images/26281.png" alt="Mars" id="image">
+        <h1>Mars Real Estate</h1>
+        <a href="/">Home</a>
+        <a href="/plots">For Sale</a>
+        <a href="/plots/new">Sell</a>
+        <a href="/users">Buy</a>
+      
     </nav>
+    <main>
+        <p>Selling premium Mars Realestate</p>
+        <canvas id="thecanvas" width="400" height="400"></canvas>
+        <h3>About Us</h3>
+        <img src="images/map-ann-4k.png" alt="Mars landscape" usemap="#map">
+        <map name="map">
+            <area shape="circle" coords="60, 40, 44" alt="plot" href="/plots">
+        </map>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quaerat et, illum deserunt in illo vero
+            officiis animi itaque blanditiis aliquid, inventore repellendus aspernatur maiores, porro ratione explicabo
+            eveniet eum.</p>
+        <h4>Contact</h4>
+    </main>
+    <div>
+        <h3>Copyright 2020</h3>
+    </div>
 </body>
+<script>
+
+    function draw() {
+        var canvas = document.getElementById("thecanvas");
+
+        var ctx = canvas.getContext('2d'),
+            count = 250, // number of random  points
+            cx = 150,
+            cy = 150,
+            radius = 148;
+
+        ctx.fillStyle = '#CCCCCC';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        var img = document.getElementById("image");
+        var pat = ctx.createPattern(img, "repeat");
+        ctx.fillStyle = pat;
+
+        ctx.beginPath();
+        ctx.moveTo(cx, cy);
+        ctx.arc(canvas.width / 2, canvas.height / 2, radius, 0, 2 * Math.PI);
+        ctx.closePath();
+
+        ctx.fill();
+
+        // create random points
+        ctx.fillStyle = '#F7FF00 ';
+     
+        while (count) {
+            var pt_angle = Math.random() * 2 * Math.PI;
+            var pt_radius_sq = Math.random() * radius * radius;
+            var pt_x = Math.sqrt(pt_radius_sq) * Math.cos(pt_angle);
+            var pt_y = Math.sqrt(pt_radius_sq) * Math.sin(pt_angle);
+            ctx.fillRect(pt_x + canvas.width / 2, pt_y + canvas.width / 2, 2, 2);
+            count--;
+            console.log(count)
+        }
+        
+    }
+</script>
+
 </html>

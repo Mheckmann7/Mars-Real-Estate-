@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/lots', {
+mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost/marsplots', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <h1>Edit: "<%=plot._id %>"</h1>
+    <form action="/plots/<%= plot._id %>?_method=PUT" method="post">
+        <label>Image Link: </label>
+        <input type="img" value="<%=plot.img %>">
+        <label>Size:</label>
+        <select name="size" id="">
+            <option value="Small">Small</option>
+            <option value="Mediun">Medium</option>
+            <option value="Large">Large</option>
+        </select>
+        <label for="">Type:</label>
+        <select name="type" id="">
+            <option value="Plot">Plot</option>
+            <option value="House">House</option>
+        </select>
+        <label>Price:</label>
+        <input type="number" name="price" id="" value="<%=plot.price%>">
+        <button type="submit">Edit</button> 
+    </form>
+</body>
+</html>
