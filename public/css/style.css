@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 30px 0 20px;
+    padding: 5px 30px 5px 20px;
   }
 
   body > main {
@@ -36,10 +36,12 @@ body {
   
   div {
     background-color: rgb(221, 104, 68);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
   }
 h1 {
    color:whitesmoke;
-
   }
   
   nav > a {
@@ -68,3 +70,19 @@ h1 {
       width: 400px;
   }
   
+  .btn {
+    float: left;
+    display: inline;
+    margin: 2px;
+  }
+
+  #plots {
+    float: left;
+    display: inline;
+    margin: 40px;
+  }
+  form{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, minmax(auto, 200px));
+  }

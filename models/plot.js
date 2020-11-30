@@ -32,13 +32,5 @@ const plotSchema = new mongoose.Schema({
 
 
 
-function getOne(id) {
-  return todos[id];
-}
-
-function updateOne(todo, id) {
-  todos.splice(id,1,todo); 
-}
-
 module.exports = mongoose.model('Plot', plotSchema);
 
