@@ -30,13 +30,15 @@
         
         <form class="form" action="/plots" method="POST">
             <label>Image Link: </label>
-            <input type="string" name="img" value="ex. http://img.com">
+            <input type="text" name="img" value="ex. http://img.com">
             <label>Size:</label>
             <select name="size" id="">
                 <option value="Small">Small</option>
                 <option value="Mediun">Medium</option>
                 <option value="Large">Large</option>
             </select>
+            <label>Description:</label>
+            <input type="text" name="description">
             <label>Type:</label>
             <select name="type">
                 <option value="Plot">Plot</option>

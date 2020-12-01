@@ -36,9 +36,7 @@
                 <img src="<%= plot.img %>" alt="Image Missing">
       
                 <p id="price">Price:$<%=plot.price %> </p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus omnis magnam quia quo repudiandae
-                    iusto consectetur qui similique, facere quidem autem distinctio reiciendis voluptas, laborum dolorem
-                    in, vel itaque nisi!</p>
+                <p> <%=plot.description %></p>
                 <a href="/plots/<%= plot._id %>" class="btn btn-secondary">Details</a>
                 <a href="/plots/<%= plot._id %>/edit" class="btn btn-primary">Edit</a>
                 <button type="submit" class="btn btn-secondary">Buy</button>

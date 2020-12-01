@@ -15,7 +15,9 @@ const mongoose = require('mongoose');
 const plotSchema = new mongoose.Schema({
     img: {
       type: String,
-      default: "/images/26281.png"
+    },
+    description: {
+      type: String
     },
     size: { 
       type: String,

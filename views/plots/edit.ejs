@@ -12,14 +12,16 @@
     <h3>Edit plot number: <%=plot._id %></h3>
     <form class="form" action="/plots/<%= plot._id %>?_method=PUT" method="POST">
         <label>Image Link: </label>
-        <input type="img" value="<%=plot.img %>">
+        <input name="img" type="text" value="<%=plot.img %>">
+        <label>Description: </label>
+        <input name="text" type="text" value="<%=plot.description %>">
         <label>Size:</label>
         <select name="size" id="">
             <option value="Small">Small</option>
             <option value="Mediun">Medium</option>
             <option value="Large">Large</option>
         </select>
-        <label for="">Type:</label>
+        <label>Type:</label>
         <select name="type" id="">
             <option value="Plot">Plot</option>
             <option value="House">House</option>
