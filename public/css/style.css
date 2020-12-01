@@ -138,3 +138,5 @@ p {
     grid-gap: 10px;
     grid-template-columns: repeat(2, minmax(auto, 200px));
   }
+
+

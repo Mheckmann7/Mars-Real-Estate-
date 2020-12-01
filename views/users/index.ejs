@@ -16,23 +16,43 @@
       <a href="/">Home</a>
       <a href="/plots">For Sale</a>
         <a href="/plots/new">Sell</a>
-        <a href="/users">Buy</a>
+        <a href="/users">Your Account</a>
   
     </nav>
     
-    <main>
+    <main >
+      
       <h3>Verify you are logged in</h3>
       <% if (user) { %>
         <a href="/logout">Log Out</a>
+        
       <% } else { %>
         <a href="/auth/google">Login With Google</a>
       <% } %>
-      
- 
-        <label>Name: <%= user.name %> </label>
-        <label>Email: <%= user.email %> </label>
-        <label>Total:</label>
-
+        
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Your Account</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (user) { %> 
+        <tr>
+         <th scope="row">Name: </th> 
+        <td> <%= user.name %> </td>
+        </tr>
+        <tr>
+          <th scope="row">Email: </th> 
+        <td> <%= user.email %> </td>
+        </tr>
+        <tr>
+      <% } else { %>
+        <td>You are not logged in</td>
+      </tr>
+      <% } %>
+    </tbody>
+    </table>
     </main>
     <div>
       <h3>Copyright 2020</h3>

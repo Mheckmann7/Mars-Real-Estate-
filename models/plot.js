@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 
-const houseSchema = new mongoose.Schema({
-      address: String,
-      bedrooms: Number,
-      bathrooms: String, 
-      addons: {
-        type: String,
-        enum: ['Green house', 'View']
-      },
-      price: Number
+// const houseSchema = new mongoose.Schema({
+//       address: String,
+//       bedrooms: Number,
+//       bathrooms: String, 
+//       addons: {
+//         type: String,
+//         enum: ['Green house', 'View']
+//       },
+//       price: Number
 
-})
+// })
 
 const plotSchema = new mongoose.Schema({
     img: {
@@ -29,7 +29,7 @@ const plotSchema = new mongoose.Schema({
       type: String,
       enum: ['Plot', 'House']
     },
-    house: [houseSchema]
+    // house: [houseSchema]
 
 }, {timestamps: true}); 
 
