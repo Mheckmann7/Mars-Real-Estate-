@@ -2,7 +2,7 @@
 
 A mock real estate app that lets you post, update, and delete listings selling plots of land on Mars. 
 
-![Screenshot] (./public/images/screenshot1.png?raw=true)
+![Screenshot] (./screenshots/screenshot1.png)
 
 ![Screenshot] (./public/images/screenshot2.png?raw=true)
 
