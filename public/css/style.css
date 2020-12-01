@@ -1,142 +1,146 @@
 * {
-    box-sizing: border-box;
-    font-family: Helvetica;
+  box-sizing: border-box;
+  font-family: Helvetica;
 
-  }
+}
 
 
 body {
-    margin: 0;
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 50px 1fr;
-    grid-template-areas:
-      "nav"
-      "main"
-  }
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    "nav"
+    "main"
+}
 
-  body > nav {
-    grid-area: nav;
-    background-color: rgb(221, 104, 68);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 5px 30px 5px 20px;
-  }
+body>nav {
+  grid-area: nav;
+  background-color: rgb(221, 104, 68);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 30px 5px 20px;
+}
 
-  body > main {
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: lightgrey;
-    padding: 20px;
-    overflow-y: scroll;
-  }
-  
-  div {
-    background-color: rgb(221, 104, 68);
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    
-  }
-  div > h3 {
-    font-size: 20px;
-    color: whitesmoke;
-  }
+body>main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgrey;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+div {
+  background-color: rgb(221, 104, 68);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+}
+
+div>h3 {
+  font-size: 20px;
+  color: whitesmoke;
+}
+
 h1 {
-   color:whitesmoke;
-   font-family: 'Major Mono Display', monospace;
-  }
-  
-  nav > a {
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
-  }
-  
-  nav > a:hover {
-    color: white;
-    background-color: #424748;
-  }
-  
-  nav > a.active {
-    color: white;
-  }
-  nav > img {
-    width: 35px;
-    margin: 10px;
-  }
- 
-  #about {
-    display: grid;
-    grid-template-rows: 50px 1fr;
-  }
-  .fa {
-    margin: 8px;
-    font-size: 48px;
-  }
+  color: whitesmoke;
+  font-family: 'Major Mono Display', monospace;
+}
 
-  #home-img {
-    width: 400px;
-    display: flex;
-    justify-content: flex-start;
-  } 
+nav>a {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+nav>a:hover {
+  color: white;
+  background-color: #424748;
+}
+
+nav>a.active {
+  color: white;
+}
+
+nav>img {
+  width: 35px;
+  margin: 10px;
+}
+
+#about {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+
+.fa {
+  margin: 8px;
+  font-size: 48px;
+}
+
+#home-img {
+  width: 400px;
+  display: flex;
+  justify-content: flex-start;
+}
 
 
 
-  #price {
-    margin: 5px;
-    font-size: 20px;
-    font-weight: bold;
-  }
+#price {
+  margin: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
 
-  .list-group-item > .btn {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 2px;
-  }
+.list-group-item>.btn {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2px;
+}
 
 p {
   margin: auto;
 }
+
 .list-group {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-  .list-group-item {
-    display: flex;
-    justify-content: center;
-   
-  }
 
-  .btn {
-    display: flex;
-    justify-content: center;
-    height: 50px;
-    flex-flow: column wrap;
-    align-self: center;
-  }
+.list-group-item {
+  display: flex;
+  justify-content: center;
 
-  #delete {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    
-  }
- 
+}
 
-  .form {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(2, minmax(auto, 200px));
-  }
+.btn {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  flex-flow: column wrap;
+  align-self: center;
+}
+
+#delete {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+
+}
 
 
+.form {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 200px));
+}

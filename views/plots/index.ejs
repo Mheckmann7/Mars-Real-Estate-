@@ -21,10 +21,10 @@
         <a href="/plots/new">Sell</a>
         <a href="/users">Your Account</a>
         <% if (user) { %>
-            <a href="/logout">Log Out</a>
-          <% } else { %>
-            <a href="/auth/google">Login With Google</a>
-          <% } %> 
+        <a href="/logout">Log Out</a>
+        <% } else { %>
+        <a href="/auth/google">Login With Google</a>
+        <% } %>
 
     </nav>
     <main>
@@ -32,15 +32,15 @@
         <ul class="list-group list-group-horizontal">
             <% plots.forEach(plot => { %>
             <li class="list-group-item list-group-item-action list-group-item-dark">
-             
+
                 <img src="<%= plot.img %>" alt="Image Missing">
-      
+
                 <p id="price">Price:$<%=plot.price %> </p>
                 <p> <%=plot.description %></p>
                 <a href="/plots/<%= plot._id %>" class="btn btn-secondary">Details</a>
                 <a href="/plots/<%= plot._id %>/edit" class="btn btn-primary">Edit</a>
                 <!-- <button type="submit" class="btn btn-secondary">Buy</button> -->
-                
+
                 <form id="delete" action="/plots/<%= plot._id %>?_method=DELETE" method="POST">
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
