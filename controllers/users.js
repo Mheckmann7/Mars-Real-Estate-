@@ -9,7 +9,9 @@ function index(req,res) {
         res.render('users/index', {
             users, 
             user: req.user 
+
         });
+       
     });
 }
 

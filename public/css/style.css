@@ -39,9 +39,15 @@ body {
     display: flex;
     justify-content: center;
     padding: 10px;
+    
+  }
+  div > h3 {
+    font-size: 20px;
+    color: whitesmoke;
   }
 h1 {
    color:whitesmoke;
+   font-family: 'Major Mono Display', monospace;
   }
   
   nav > a {
@@ -66,22 +72,68 @@ h1 {
     width: 35px;
     margin: 10px;
   }
-  main > img {
-      width: 400px;
+ 
+  #about {
+    display: grid;
+    grid-template-rows: 50px 1fr;
   }
-  
-  .btn {
-    float: left;
-    display: inline;
+  .fa {
+    margin: 8px;
+    font-size: 48px;
+  }
+
+  #home-img {
+    width: 400px;
+    display: flex;
+    justify-content: flex-start;
+  } 
+
+
+
+  #price {
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .list-group-item > .btn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 2px;
   }
 
-  #plots {
-    float: left;
-    display: inline;
-    margin: 40px;
+p {
+  margin: auto;
+}
+.list-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+  .list-group-item {
+    display: flex;
+    justify-content: center;
+   
   }
-  form{
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    flex-flow: column wrap;
+    align-self: center;
+  }
+
+  #delete {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    
+  }
+ 
+
+  .form {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(2, minmax(auto, 200px));

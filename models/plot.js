@@ -13,7 +13,10 @@ const houseSchema = new mongoose.Schema({
 })
 
 const plotSchema = new mongoose.Schema({
-    img: String,
+    img: {
+      type: String,
+      default: "/images/26281.png"
+    },
     size: { 
       type: String,
       enum: ['Small', 'Medium', 'Large']

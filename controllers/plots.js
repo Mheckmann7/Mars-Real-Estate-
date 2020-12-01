@@ -34,6 +34,7 @@ function newPlot(req,res) {
 
 function create(req,res) {
    const plot = new Plot(req.body);
+   plot.user = req.user._id;
    plot.save(function(err ) {
        if(err) return res.redirect('/plots/new');
        res.redirect(`/plots/${plot._id}`);
