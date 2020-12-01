@@ -13,7 +13,7 @@
 - CSS
 - Bootstrap  
 
-### Link to app: 
+### Link to app: https://mars-real-estate.herokuapp.com/ 
 
 ### Next Steps
 - Implement a "buy" action 
