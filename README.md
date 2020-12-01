@@ -2,9 +2,9 @@
 
 A mock real estate app that lets you post, update, and delete listings selling plots of land on Mars. 
 
-![Screenshot] (./images/screenshot1.png?rew=true)
+![Screenshot] (./public/images/screenshot1.png?raw=true)
 
-![Screenshot] (./images/screenshot2.png?rew=true)
+![Screenshot] (./public/images/screenshot2.png?raw=true)
 
 #### Technologies Used
 - Mongoose 
