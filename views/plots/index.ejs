@@ -39,7 +39,7 @@
                 <p> <%=plot.description %></p>
                 <a href="/plots/<%= plot._id %>" class="btn btn-secondary">Details</a>
                 <a href="/plots/<%= plot._id %>/edit" class="btn btn-primary">Edit</a>
-                <button type="submit" class="btn btn-secondary">Buy</button>
+                <!-- <button type="submit" class="btn btn-secondary">Buy</button> -->
                 
                 <form id="delete" action="/plots/<%= plot._id %>?_method=DELETE" method="POST">
                     <button type="submit" class="btn btn-danger">Delete</button>
